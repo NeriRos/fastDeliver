@@ -1,0 +1,249 @@
+<style>
+	.baldar tr td {
+		width: 200px;
+		text-align: right;
+	}
+
+	.modal-title {
+		margin-left: 100px;
+	}
+</style>
+<form id="send-mail-form-<%- orderid %>" data-hasrequired="* Required Fields" autocomplete="off"
+	data-mage-init='{"validation":{}}' method="get" enctype="multipart/form-data" action="<%- formaction %>">
+	<div class="modal-body">
+		<div class="bootbox-body">
+			<table class="baldar" style="line-height:40px;" cellpadding="1" cellspacing="1">
+				<tr>
+					<td>
+						<select class="required-entry" name="delivery_type">
+							<option value="1">משלוח</option>
+							<option value="2">איסוף</option>
+							<option value="3">העברה</option>
+						</select>
+					</td>
+					<td>&nbsp;&nbsp;סוג משלוח</td>
+				</tr>
+				<tr>
+					<td><input id="origin_street" class="form-control required-entry" data-validate="{required:true}"
+							type="text" name="origin_street" value="<%- origin_street%>" /></td>
+
+					<td>&nbsp;&nbsp;רחוב מוצא</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="text" name="origin_house_number"
+							value="<%- origin_house_number%>" /></td>
+
+					<td>&nbsp;&nbsp;מספר בית מוצא</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="text" name="origin_town" value="<%- origin_city%>" /></td>
+
+					<td>&nbsp;&nbsp;עיר מוצא</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="text" name="destination_street"
+							value="<%- destination_street %>" /></td>
+
+					<td>&nbsp;&nbsp;רחוב יעד</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="text" name="destination_house_number"
+							value="<%- destination_house_number%>" /></td>
+
+					<td>&nbsp;&nbsp;מספר בית יעד</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="destination_entrence"
+							value="" /></td>
+					<td><input type="text" name="destination_floor"
+							value="" /></td>
+					<td><input type="text" name="destination_apartment"
+							value="" /></td>
+
+					<td>&nbsp;&nbsp;כניסה, קומה, דירה</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="text" name="destination_city"
+							value="<%- destination_city%>" /></td>
+
+					<td>&nbsp;&nbsp;עיר יעד</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" maxlength="50" type="text" name="origin_company"
+							value="<%- origin_company%>" /></td>
+
+					<td>&nbsp;&nbsp;שם חברת מוצא</td>
+				</tr>
+				<tr>
+					<td><input maxlength="50" type="text" name="destination_company"
+							value="<%- destination_compan y%>" /></td>
+
+					<td>&nbsp;&nbsp;שם חברת יעד</td>
+				</tr>
+				<tr>
+					<td><textarea rows="2" cols="40" maxlength="250" name="shipping_instructions"
+							value="<%- shipping_instructions%>"></textarea></td>
+
+					<td valign="top">&nbsp;&nbsp;הוראות משלוח</td>
+				</tr>
+				<tr>
+					<td>
+						<select class="required-entry" name="urgency_number">
+							<option value="1">רגיל</option>
+							<option value="2">דחוף</option>
+						</select>
+					</td>
+
+					<td>&nbsp;&nbsp;דחיפות</td>
+				</tr>
+				<tr>
+					<td>
+						<select class="required-entry" name="today_tomorrow">
+							<option value="0">כן</option>
+							<option value="1">לא</option>
+						</select>
+					</td>
+
+					<td>&nbsp;&nbsp;מהיום למחר</td>
+				</tr>
+				<tr>
+					<td>
+						<select class="required-entry" name="vehicle_type">
+							<option value="1">אופנוע</option>
+							<option value="2">רכב</option>
+						</select>
+					</td>
+
+					<td>&nbsp;&nbsp;סוג כלי רכב</td>
+				</tr>
+				<tr>
+					<td><input type="number" class="required-entry validate-number" name="number_of_packages"
+							value=1"" /></td>
+
+					<td>&nbsp;&nbsp;מספר חבילות</td>
+				</tr>
+				<tr>
+					<td>
+						<select class="required-entry" name="is_double">
+							<option value="1">רגיל</option>
+							<option value="2">כפול</option>
+						</select>
+					</td>
+
+					<td>&nbsp;&nbsp;משלוח כפול</td>
+				</tr>
+				<tr style="display:none;">
+					<td><input type="text" name="always" value="0" hidden /></td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" maxlength="50" type="text" name="site_internal_order_id"
+							value="<%- site_internal_order_id%>" /></td>
+
+					<td>&nbsp;&nbsp;מזהה הזמנה פנימי</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="text" name="baldar_client_code"
+							value="<%- baldar_client_code %>" /></td>
+
+					<td>&nbsp;&nbsp;קוד לקוח</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="barcode" value="" /><br />&nbsp;"," :ניתן לרשום מספר ברקודים מופרדים ב
+					</td>
+
+					<td valign="top">&nbsp;&nbsp;ברקוד</td>
+				</tr>
+				<tr>
+					<td><textarea rows="2" cols="40" maxlength="200" name="comments"></textarea></td>
+
+					<td valign="top">&nbsp;&nbsp;הערות</td>
+				</tr>
+				<tr style="display: none">
+					<td><input class="required-entry validate-number" type="number" name="number_of_pallets"
+							value="0" />
+					</td>
+
+					<td>&nbsp;&nbsp;מספר פלטות</td>
+				</tr>
+				<tr>
+					<td><input class="validate-number" type="number" name="origin_postcode"
+							value="<%- origin_postcode%>" /></td>
+
+					<td>&nbsp;&nbsp;מיקוד מוצא</td>
+				</tr>
+				<tr>
+					<td><input class="validate-number" type="number" name="destination_postcode"
+							value="<%- destination_postcode%>" /></td>
+
+					<td>&nbsp;&nbsp;מיקוד יעד</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="text" name="contact_name" value="<%- contact_name%>" /></td>
+
+					<td>&nbsp;&nbsp;שם איש קשר</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="tel" name="contact_telephone"
+							value="<%- contact_telephone%>" /></td>
+
+					<td>&nbsp;&nbsp;טלפון איש קשר</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry" type="email" name="contact_email" value="<%- contact_email%>" />
+					</td>
+
+					<td>&nbsp;&nbsp;אימייל איש קשר</td>
+				</tr>
+				<tr>
+					<td><input class="required-entry datepicker" type="text" id="execution_date_<%- orderid %>"
+							name="execution_date" value="<%- execution_date%>" /></td>
+
+					<td>&nbsp;&nbsp;תאריך ביצוע</td>
+
+				</tr>
+				<tr>
+					<td>
+						<select class="required-entry" name="reverse_charge_shipment">
+							<option value="0">לא</option>
+							<option value="1">כן</option>
+						</select>
+					</td>
+
+					<td>&nbsp;&nbsp;משלוח גובינא</td>
+				</tr>
+			</table>
+			<input type="hidden" name="order_id" value="<%- orderid %>" />
+		</div>
+	</div>
+	<div class="modal-footer">
+		<span class="error"></span>
+		<button type="reset" class="btn btn-default"><span><%- cancellabel %></span></button>
+		<button type="submit" class="btn btn-primary"><span><%- submitlabel %></span></button>
+		<span class="clear"></span>
+	</div>
+</form>
+<script>
+	require([
+		"jquery",
+		'mage/mage',
+		"mage/calendar"
+	], function ($) {
+		var dataForm = jQuery('#send-mail-form-<%- orderid %>');
+		dataForm.mage('validation', {});
+		jQuery('.baldar input, .baldar select').each(function () {
+			jQuery(this).css("width", "200px");
+		});
+		$(document).on("focusin", "#execution_date_<%- orderid %>", function () {
+			$("#execution_date_<%- orderid %>").calendar({
+				dateFormat: "yyyy-mm-dd",
+				timeFormat: "H:m:s",
+				changeMonth: true,
+				changeYear: true,
+				numberOfMonths: 1,
+				showsTime: false,
+				hideIfNoPrevNext: true,
+				buttonText: "<?php echo __('Select Date') ?>"
+			});
+		});
+	});
+</script>

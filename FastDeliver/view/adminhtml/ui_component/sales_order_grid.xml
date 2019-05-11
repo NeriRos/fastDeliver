@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <actionsColumn name="send_mail" class="LightX\FastDeliver\Ui\Component\Listing\Columns\Remark">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">LightX_FastDeliver/js/grid/columns/remark</item>
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                    <item name="sortable" xsi:type="boolean">false</item>
+                    <item name="label" xsi:type="string" translate="true">Send</item>
+                    <item name="sortOrder" xsi:type="number">13</item>
+                </item>
+            </argument>
+        </actionsColumn>
+    </columns>
+</listing>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/fastDeliver/submitorder" method="POST">
+        <service class="LightX\FastDeliver\Api\FastDeliverInterface" method="submitOrder"/>
+        <resources>
+            <resource ref="LightX_FastDeliver::submit_order"/>
+        </resources>
+    </route>
+</routes>

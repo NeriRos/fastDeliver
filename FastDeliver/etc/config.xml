@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <fastDeliver>
+            <general>
+				<api_url>http://141.226.21.44:8050/BaldarP/Service.asmx?op=SaveData</api_url>
+                <username>ner</username>
+                <password>pass</password>
+            </general>
+        </fastDeliver>
+    </default>
+</config>
