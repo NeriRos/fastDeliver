@@ -24,76 +24,76 @@ define([
             return row[this.index + '_orderid'];
         },
         getLabel: function (row) {
-            return row[this.index + '_html']
+            return row[this.index + '_html'];
         },
         getTitle: function (row) {
-            return row[this.index + '_title']
+            return row[this.index + '_title'];
         },
         getSubmitlabel: function (row) {
-            return row[this.index + '_submitlabel']
+            return row[this.index + '_submitlabel'];
         },
         getCancellabel: function (row) {
-            return row[this.index + '_cancellabel']
+            return row[this.index + '_cancellabel'];
         },
 		getOstreet: function (row) {
-            return row[this.index + '_origin_street']
+            return row[this.index + '_origin_street'];
         },
 		getOcity: function (row) {
-            return row[this.index + '_origin_city']
+            return row[this.index + '_origin_city'];
         },
 		getOcompany: function (row) {
-            return row[this.index + '_origin_company']
+            return row[this.index + '_origin_company'];
         },
 		getOpostcode: function (row) {
-            return row[this.index + '_origin_postcode']
+            return row[this.index + '_origin_postcode'];
         },
 		getDstreet: function (row) {
-            return row[this.index + '_destination_street']
+            return row[this.index + '_destination_street'];
         },
 		getDcity: function (row) {
-            return row[this.index + '_destination_city']
+            return row[this.index + '_destination_city'];
         },
 		getDcompany: function (row) {
-            return row[this.index + '_destination_company']
+            return row[this.index + '_destination_company'];
         },
 		getDpostcode: function (row) {
-            return row[this.index + '_destination_postcode']
+            return row[this.index + '_destination_postcode'];
         },
 		getShippingInstruction: function (row) {
-            return row[this.index + '_shipping_instruction']
+            return row[this.index + '_shipping_instruction'];
         },
 		getDhousenumber: function (row) {
-            return row[this.index + '_destination_house_number']
+            return row[this.index + '_destination_house_number'];
         },
 		getDestinationEnterance: function (row) {
-            return row[this.index + '_destination_enterance']
+            return row[this.index + '_destination_enterance'];
         },
 		getDestinationFloor: function (row) {
-            return row[this.index + '_destination_floor']
+            return row[this.index + '_destination_floor'];
         },
 		getDestinationApartment: function (row) {
-            return row[this.index + '_destination_apartment']
+            return row[this.index + '_destination_apartment'];
         },
 		getContactName: function (row) {
-            return row[this.index + '_contact_name']
+            return row[this.index + '_contact_name'];
         },
 		getContactTelephone: function (row) {
-            return row[this.index + '_contact_telephone']
+            return row[this.index + '_contact_telephone'];
         },
 		getContactEmail: function (row) {
-            return row[this.index + '_contact_email']
+            return row[this.index + '_contact_email'];
         },
 		getExecutionDate: function (row) {
-            return row[this.index + '_execution_date']
+            return row[this.index + '_execution_date'];
         },
 		getSiteInternalOrderId: function (row) {
-            return row[this.index + '_site_internal_order_id']
+            return row[this.index + '_site_internal_order_id'];
         },
 		getOHouseNumber: function (row) {
-            return row[this.index + '_origin_house_number']
+            return row[this.index + '_origin_house_number'];
         },
 		getBaldarClientCode: function (row) {
-            return row[this.index + '_baldar_client_code']
+            return row[this.index + '_baldar_client_code'];
         },
         preview: function (row) {
             var modalHtml = mageTemplate(

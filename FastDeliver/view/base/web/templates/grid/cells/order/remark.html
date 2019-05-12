@@ -25,18 +25,18 @@
 				</tr>
 				<tr>
 					<td><input id="origin_street" class="form-control required-entry" data-validate="{required:true}"
-							type="text" name="origin_street" value="<%- origin_street%>" /></td>
+							type="text" name="origin_street" value="<%- origin_street %>" /></td>
 
 					<td>&nbsp;&nbsp;רחוב מוצא</td>
 				</tr>
 				<tr>
 					<td><input class="required-entry" type="text" name="origin_house_number"
-							value="<%- origin_house_number%>" /></td>
+							value="<%- origin_house_number %>" /></td>
 
 					<td>&nbsp;&nbsp;מספר בית מוצא</td>
 				</tr>
 				<tr>
-					<td><input class="required-entry" type="text" name="origin_town" value="<%- origin_city%>" /></td>
+					<td><input class="required-entry" type="text" name="origin_town" value="<%- origin_city %>" /></td>
 
 					<td>&nbsp;&nbsp;עיר מוצא</td>
 				</tr>
@@ -48,41 +48,38 @@
 				</tr>
 				<tr>
 					<td><input class="required-entry" type="text" name="destination_house_number"
-							value="<%- destination_house_number%>" /></td>
+							value="<%- destination_house_number %>" /></td>
 
 					<td>&nbsp;&nbsp;מספר בית יעד</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="destination_entrence"
-							value="" /></td>
-					<td><input type="text" name="destination_floor"
-							value="" /></td>
-					<td><input type="text" name="destination_apartment"
-							value="" /></td>
+					<td><input type="text" name="destination_entrence" value="" /></td>
+					<td><input type="text" name="destination_floor" value="" /></td>
+					<td><input type="text" name="destination_apartment" value="" /></td>
 
 					<td>&nbsp;&nbsp;כניסה, קומה, דירה</td>
 				</tr>
 				<tr>
 					<td><input class="required-entry" type="text" name="destination_city"
-							value="<%- destination_city%>" /></td>
+							value="<%- destination_city %>" /></td>
 
 					<td>&nbsp;&nbsp;עיר יעד</td>
 				</tr>
 				<tr>
 					<td><input class="required-entry" maxlength="50" type="text" name="origin_company"
-							value="<%- origin_company%>" /></td>
+							value="<%- origin_company %>" /></td>
 
 					<td>&nbsp;&nbsp;שם חברת מוצא</td>
 				</tr>
 				<tr>
 					<td><input maxlength="50" type="text" name="destination_company"
-							value="<%- destination_compan y%>" /></td>
+							value="<%- destination_company %>" /></td>
 
 					<td>&nbsp;&nbsp;שם חברת יעד</td>
 				</tr>
 				<tr>
 					<td><textarea rows="2" cols="40" maxlength="250" name="shipping_instructions"
-							value="<%- shipping_instructions%>"></textarea></td>
+							value="<%- shipping_instructions %>"></textarea></td>
 
 					<td valign="top">&nbsp;&nbsp;הוראות משלוח</td>
 				</tr>
@@ -118,7 +115,7 @@
 				</tr>
 				<tr>
 					<td><input type="number" class="required-entry validate-number" name="number_of_packages"
-							value=1"" /></td>
+							value="" /></td>
 
 					<td>&nbsp;&nbsp;מספר חבילות</td>
 				</tr>
@@ -137,7 +134,7 @@
 				</tr>
 				<tr>
 					<td><input class="required-entry" maxlength="50" type="text" name="site_internal_order_id"
-							value="<%- site_internal_order_id%>" /></td>
+							value="<%- site_internal_order_id %>" /></td>
 
 					<td>&nbsp;&nbsp;מזהה הזמנה פנימי</td>
 				</tr>
@@ -150,7 +147,6 @@
 				<tr>
 					<td><input type="text" name="barcode" value="" /><br />&nbsp;"," :ניתן לרשום מספר ברקודים מופרדים ב
 					</td>
-
 					<td valign="top">&nbsp;&nbsp;ברקוד</td>
 				</tr>
 				<tr>
@@ -158,7 +154,7 @@
 
 					<td valign="top">&nbsp;&nbsp;הערות</td>
 				</tr>
-				<tr style="display: none">
+				<tr style="display: none;">
 					<td><input class="required-entry validate-number" type="number" name="number_of_pallets"
 							value="0" />
 					</td>
@@ -167,36 +163,37 @@
 				</tr>
 				<tr>
 					<td><input class="validate-number" type="number" name="origin_postcode"
-							value="<%- origin_postcode%>" /></td>
+							value="<%- origin_postcode %>" /></td>
 
 					<td>&nbsp;&nbsp;מיקוד מוצא</td>
 				</tr>
 				<tr>
 					<td><input class="validate-number" type="number" name="destination_postcode"
-							value="<%- destination_postcode%>" /></td>
+							value="<%- destination_postcode %>" /></td>
 
 					<td>&nbsp;&nbsp;מיקוד יעד</td>
 				</tr>
 				<tr>
-					<td><input class="required-entry" type="text" name="contact_name" value="<%- contact_name%>" /></td>
+					<td><input class="required-entry" type="text" name="contact_name" value="<%- contact_name %>" />
+					</td>
 
 					<td>&nbsp;&nbsp;שם איש קשר</td>
 				</tr>
 				<tr>
 					<td><input class="required-entry" type="tel" name="contact_telephone"
-							value="<%- contact_telephone%>" /></td>
+							value="<%- contact_telephone %>" /></td>
 
 					<td>&nbsp;&nbsp;טלפון איש קשר</td>
 				</tr>
 				<tr>
-					<td><input class="required-entry" type="email" name="contact_email" value="<%- contact_email%>" />
+					<td><input class="required-entry" type="email" name="contact_email" value="<%- contact_email %>" />
 					</td>
 
 					<td>&nbsp;&nbsp;אימייל איש קשר</td>
 				</tr>
 				<tr>
 					<td><input class="required-entry datepicker" type="text" id="execution_date_<%- orderid %>"
-							name="execution_date" value="<%- execution_date%>" /></td>
+							name="execution_date" value="<%- execution_date %>" /></td>
 
 					<td>&nbsp;&nbsp;תאריך ביצוע</td>
 
