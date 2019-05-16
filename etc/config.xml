@@ -3,7 +3,7 @@
     <default>
         <fastDeliver>
             <general>
-				<api_url>http://141.226.21.44:8050/BaldarP/Service.asmx?op=SaveData</api_url>
+				<api_url>http://5.102.192.189:8050/BaldarP/Service.asmx?op=SaveData</api_url>
                 <username>ner</username>
                 <password>pass</password>
             </general>

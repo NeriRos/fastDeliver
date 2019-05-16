@@ -20,41 +20,46 @@ class FastDeliver implements FastDeliverInterface
 	{
 		return json_encode($orderData);
 
-		$paramsArr = [];
-		$username = 'ner';
-		$password = 'pass';
+		// $paramsArr = [];
+		// $username = 'ner';
+		// $password = 'pass';
 
-		if (empty($orderData)) {
-			return json_encode(['Invalid orders data.']);
-		}
+		// if (empty($orderData)) {
+		// 	return json_encode(['Invalid orders data.']);
+		// }
+		// foreach ($orderData as $key => $value) {
+		// 	$paramsArr[] = $value;
+		// }
+		
+		// $pParamString = "pParam=" . implode(";", $paramsArr);
+		
+		// print_r($orderData);
+		// echo $pParamString;
+		// die();
+		// print_r($orderData);
+		// echo $pParamString;
+		// $ch = curl_init();
+		// $url = "http://5.102.192.189:8050/BaldarP/Service.asmx/SaveData";
 
-		foreach ($orderData as $key => $value) {
-			$paramsArr[] = $value;
-		}
+		// curl_setopt($ch, CURLOPT_URL, $url);
+		// curl_setopt($ch, CURLOPT_HEADER, 1);
+		// curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
+		// curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: x-www-form-urlencoded'));
+		// curl_setopt($ch, CURLOPT_POST, 1);                //0 for a get request
+		// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		// curl_setopt($ch, CURLOPT_POSTFIELDS, $pParamString);
+		// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		// curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+		// curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 
-		$pParamString = "pParam=" . implode(";", $paramsArr);
-		$ch = curl_init();
-		$url = "http://5.102.192.189:8050/BaldarP/Service.asmx/SaveData";
+		// $response = curl_exec($ch);
 
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_HEADER, 1);
-		curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: x-www-form-urlencoded'));
-		curl_setopt($ch, CURLOPT_POST, 1);                //0 for a get request
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $pParamString);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
-		curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+		// if (curl_error($ch)) {
+		// 	return $error_msg = curl_error($ch);
+		// }
 
-		$response = curl_exec($ch);
+		// curl_close($ch);
 
-		if (curl_error($ch)) {
-			return $error_msg = curl_error($ch);
-		}
-
-		curl_close($ch);
-
-		return $response;
+		// return $response;
 	}
 }
