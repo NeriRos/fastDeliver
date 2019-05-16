@@ -14,13 +14,13 @@ define([
                 'data-grid-html-cell': true
             }
         },
-        gethtml: function (row) {
+        getHTML: function (row) {
             return row[this.index + '_html'];
         },
         getFormaction: function (row) {
             return row[this.index + '_formaction'];
         },
-        getOrderid: function (row) {
+        getOrderId: function (row) {
             return row[this.index + '_orderid'];
         },
         getLabel: function (row) {
@@ -35,38 +35,38 @@ define([
         getCancellabel: function (row) {
             return row[this.index + '_cancellabel'];
         },
-		getOstreet: function (row) {
+		getOriginStreet: function (row) {
             return row[this.index + '_origin_street'];
         },
-		getOcity: function (row) {
+		getOriginCity: function (row) {
             return row[this.index + '_origin_city'];
         },
-		getOcompany: function (row) {
+		getOriginCompany: function (row) {
             return row[this.index + '_origin_company'];
         },
-		getOpostcode: function (row) {
+		getOriginPostCode: function (row) {
             return row[this.index + '_origin_postcode'];
         },
-		getDstreet: function (row) {
+		getDestinationStreet: function (row) {
             return row[this.index + '_destination_street'];
         },
-		getDcity: function (row) {
+		getDestinationCity: function (row) {
             return row[this.index + '_destination_city'];
         },
-		getDcompany: function (row) {
+		getDestinationCompany: function (row) {
             return row[this.index + '_destination_company'];
         },
-		getDpostcode: function (row) {
+		getDestinationPostCode: function (row) {
             return row[this.index + '_destination_postcode'];
         },
 		getShippingInstruction: function (row) {
             return row[this.index + '_shipping_instruction'];
         },
-		getDhousenumber: function (row) {
+		getDestinationHouseNumber: function (row) {
             return row[this.index + '_destination_house_number'];
         },
-		getDestinationEnterance: function (row) {
-            return row[this.index + '_destination_enterance'];
+		getDestinationEntrance: function (row) {
+            return row[this.index + '_destination_entrance'];
         },
 		getDestinationFloor: function (row) {
             return row[this.index + '_destination_floor'];
@@ -89,7 +89,7 @@ define([
 		getSiteInternalOrderId: function (row) {
             return row[this.index + '_site_internal_order_id'];
         },
-		getOHouseNumber: function (row) {
+		getOriginHouseNumber: function (row) {
             return row[this.index + '_origin_house_number'];
         },
 		getBaldarClientCode: function (row) {
@@ -99,24 +99,24 @@ define([
             var modalHtml = mageTemplate(
                 sendmailPreviewTemplate,
                 {
-                    html: this.gethtml(row), 
+                    html: this.getHTML(row), 
                     title: this.getTitle(row), 
                     label: this.getLabel(row), 
                     formaction: this.getFormaction(row),
-                    orderid: this.getOrderid(row),
+                    orderid: this.getOrderId(row),
                     submitlabel: this.getSubmitlabel(row), 
                     cancellabel: this.getCancellabel(row),
-					origin_street: this.getOstreet(row),
-					origin_city: this.getOcity(row),
-					origin_house_number: this.getOHouseNumber(row),
-					destination_street: this.getDstreet(row),
-					destination_house_number: this.getDhousenumber(row),
-					destination_city: this.getDcity(row),
-					origin_company: this.getOcompany(row),
-					destination_company: this.getDcompany(row),
+					origin_street: this.getOriginStreet(row),
+					origin_city: this.getOriginCity(row),
+					origin_house_number: this.getOriginHouseNumber(row),
+					destination_street: this.getDestinationStreet(row),
+					destination_house_number: this.getDestinationHouseNumber(row),
+					destination_city: this.getDestinationCity(row),
+					origin_company: this.getOriginCompany(row),
+					destination_company: this.getDestinationCompany(row),
 					shipping_instructions: this.getShippingInstruction(row),
-					origin_postcode: this.getOpostcode(row),
-					destination_postcode: this.getDpostcode(row),
+					origin_postcode: this.getOriginPostCode(row),
+					destination_postcode: this.getDestinationPostCode(row),
 					contact_name: this.getContactName(row),
 					contact_telephone: this.getContactTelephone(row),
 					contact_email: this.getContactEmail(row),
