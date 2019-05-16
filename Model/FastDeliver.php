@@ -34,7 +34,7 @@ class FastDeliver implements FastDeliverInterface
 
 		$pParamString = "pParam=" . implode(";", $paramsArr);
 		$ch = curl_init();
-		$url = "http://141.226.21.44:8050/BaldarP/Service.asmx/SaveData";
+		$url = "http://5.102.192.189:8050/BaldarP/Service.asmx/SaveData";
 
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HEADER, 1);

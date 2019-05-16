@@ -63,6 +63,8 @@ define([
             return row[this.index + '_shipping_instruction'];
         },
 		getDestinationHouseNumber: function (row) {
+            console.log("Test", row[this.index + '_destination_house_number'],  row[this.index + '_destination_entrance'], row);
+            
             return row[this.index + '_destination_house_number'];
         },
 		getDestinationEntrance: function (row) {
