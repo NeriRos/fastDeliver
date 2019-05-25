@@ -149,20 +149,28 @@ class Saveremark extends \Magento\Cms\Controller\Adminhtml\Block
 		// print_r("ORDER data");
 		// print_r($orderData);
 
+		$destination_entrence = $orderData["destination_entrance"];
+		$destination_floor = $orderData["destination_floor"];
+		$destination_apartment = $orderData["destination_apartment"];
+
+		unset($orderData["destination_entrance"]);
+		unset($orderData["destination_floor"]);
+		unset($orderData["destination_apartment"]);
+
 		foreach ($orderData as $key => $value) {
-			$paramsArr[] = $value;
+			if ($key == "destination_house_number") {
+				$paramsArr[] = $value .
+				(!!$destination_entrence ? " " . $destination_entrence : "") .
+				(!!$destination_floor ? ", " . $destination_floor : "") .
+				(!!$destination_apartment ? ", " . $destination_apartment : "");
+			}
+			else {
+				$paramsArr[] = $value;
+			}
 		}
 
 		$soapUrl = $this->helperData->getGeneralConfig('api_url');
 		$pParamString = implode(";", $paramsArr);
-
-				
-		print_r($orderData);
-		print_r($paramsArr);
-		die();
-				
-		print_r($orderData);
-		print_r($paramsArr);
 
 		$soapUser = $this->helperData->getGeneralConfig('username');
 		$soapPassword = $this->helperData->getGeneralConfig('password');
@@ -218,7 +226,7 @@ class Saveremark extends \Magento\Cms\Controller\Adminhtml\Block
 		$fieldLabels = ["סוג משלוח", "רחוב מוצא", "מספר בית מוצא", "עיר מוצא", "רחוב יעד", "מספר בית יעד", "עיר יעד", "שם חברת מוצא", "שם חברת יעד", "הודאות משלוח", "דחיפות", "מהיום למחר", "סוג כלי רכב", "מספר חבילות", "משלוח כפול", "מזהה הזמנה פנימי", "קוד לקוח", "ברקוד", "הערות", "מספר פלטות", "מיקוד מוצא", "מיקוד יעד", "שם איש קשר", "טלפון איש קשר", "אימייל איש קשר", "תאריך ביצוע", "משלוח גובינא"];
 
 		if($badFieldNumber + 200 < count($fieldLabels)) {
-			return $fieldLabels[$badFieldNumber + 200];
+			return $fieldLabels[$badFieldNumber + 200] . " - code: " . $badFieldNumber;
 		} else {
 			return "לא ידוע (" . $badFieldNumber . ")";
 		}
